@@ -74,9 +74,14 @@ body {
 		p {
 			font-weight: 200;
 		}
+	}
+
+	&__title {
+		color: colors.$special-color;
+		font-weight: 300;
 
 		span {
-			color: colors.$special-color;
+			font-weight: 900;
 		}
 	}
 
@@ -466,6 +471,26 @@ body {
 
 	&__special-text {
 		color: colors.$special-color;
-		font-weight: bold;
+		font-weight: 300;
+
+		&--bold {
+			font-weight: bold;
+		}
+	}
+
+	&__icons {
+		padding: 1em 1em;
+
+		.fa-brands {
+			font-size: 3rem;
+			padding: 0 0.8em;
+			color: colors.$white-color;
+			transition: transform 0.3s, color 0.3s;
+
+			&:hover {
+				transform: scale(1.25);
+				color: colors.$special-color;
+			}
+		}
 	}
 }
