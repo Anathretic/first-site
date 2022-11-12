@@ -1,3 +1,4 @@
+const body = document.querySelector('body')
 const navMobile = document.querySelector('.nav-mobile')
 const navBtn = document.querySelector('.hamburger')
 const allNavItems = document.querySelectorAll('.nav__link')
@@ -11,9 +12,19 @@ const handleNav = () => {
         item.addEventListener('click', () => {
             navMobile.classList.remove('nav-mobile--active')
             navBtn.classList.remove('is-active')
+            body.classList.remove('scroll-block')
         })
     })
 
+    scrollBlockNavBtn()
+}
+
+const scrollBlockNavBtn = () => {
+    if(body.classList.contains('scroll-block')) {
+        body.classList.remove('scroll-block')
+    } else {
+        body.classList.add('scroll-block')
+    }
 }
 
 const currentYear = () => {

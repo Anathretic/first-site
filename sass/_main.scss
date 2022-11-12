@@ -27,6 +27,10 @@ body {
 	width: 100%;
 }
 
+.scroll-block {
+	overflow: hidden;
+}
+
 .hr {
 	border-color: colors.$special-color;
 	margin-bottom: 1.8em;

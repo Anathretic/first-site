@@ -76,6 +76,10 @@ body {
   width: 100%;
 }
 
+.scroll-block {
+  overflow: hidden;
+}
+
 .hr {
   border-color: #FF1E56;
   margin-bottom: 1.8em;
