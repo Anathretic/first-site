@@ -456,6 +456,12 @@ body {
   background-color: #FF1E56;
   color: #232323;
 }
+.contact__form-error {
+  padding: 2em 0;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #FF1E56;
+}
 
 .footer {
   font-size: 2rem;
@@ -504,12 +510,12 @@ body {
     grid-column: 2/3;
     justify-content: end;
   }
-  .about__title {
-    padding: 0 1em;
-  }
   .about__box-img, .about__box-text {
     max-width: 500px;
     max-height: 340px;
+  }
+  .about__title {
+    padding: 0 1em;
   }
   .about__bg-icon {
     position: absolute;
@@ -635,6 +641,9 @@ body {
   }
   .contact__form-btn {
     grid-row: 3/4;
+  }
+  .contact__form-error {
+    font-size: 2.2rem;
   }
 }
 @media (min-width: 992px) {

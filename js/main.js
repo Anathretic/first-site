@@ -3,6 +3,19 @@ const navMobile = document.querySelector('.nav-mobile')
 const navBtn = document.querySelector('.hamburger')
 const allNavItems = document.querySelectorAll('.nav__link')
 const actualYear = document.querySelector('.footer__year')
+const userName = document.querySelector('#name')
+const userEmail = document.querySelector('#email')
+const userMsg = document.querySelector('#msg')
+const errorMsg = document.querySelector('.contact__form-error')
+const contactBtn = document.querySelector('.contact__form-btn')
+
+const scrollBlockNavBtn = () => {
+    if(body.classList.contains('scroll-block')) {
+        body.classList.remove('scroll-block')
+    } else {
+        body.classList.add('scroll-block')
+    }
+}
 
 const handleNav = () => {
     navMobile.classList.toggle('nav-mobile--active')
@@ -19,11 +32,20 @@ const handleNav = () => {
     scrollBlockNavBtn()
 }
 
-const scrollBlockNavBtn = () => {
-    if(body.classList.contains('scroll-block')) {
-        body.classList.remove('scroll-block')
+const msgFilter = () => {
+    if(userName.value !== '' && userMsg.value !== '' && userEmail.value !== '') {
+        contactBtn.textContent = 'Sent!',
+        userName.value = ''
+        userEmail.value = ''
+        userMsg.value = ''
+        errorMsg.textContent = ''
+
+        setTimeout(() => {
+            contactBtn.textContent = 'Send'
+        }, 3000)
+
     } else {
-        body.classList.add('scroll-block')
+        errorMsg.textContent = 'We need more information..'
     }
 }
 
@@ -34,4 +56,6 @@ const currentYear = () => {
 
 currentYear()
 
+
+contactBtn.addEventListener('click', msgFilter)
 navBtn.addEventListener('click', handleNav)

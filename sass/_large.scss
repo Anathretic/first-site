@@ -54,10 +54,10 @@
                 animation: pulse 2s infinite;
             }
 
-        }
+            &-icon {
+                width: 50px;
+            }
 
-        &__arrow-icon {
-            width: 50px;
         }
     
         &__bg-icon-one {

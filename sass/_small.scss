@@ -1,89 +1,88 @@
 @media (min-width: 376px) {
-    .gallery {
-            img {
-                height: 65rem;
-            }
-        }
+	.gallery {
+		img {
+			height: 65rem;
+		}
+	}
 }
 
 @media (min-width: 472px) {
-    .gallery {
-            img {
-                height: 70rem;
-            }
-        }
+	.gallery {
+		img {
+			height: 70rem;
+		}
+	}
 }
 
-
 @media (min-width: 576px) {
-    .about {
-        grid-template-columns: repeat(2, 1fr);
-        padding: 10em 2em;
+	.about {
+		grid-template-columns: repeat(2, 1fr);
+		padding: 10em 2em;
 
-        &__box {
-            display: grid;
-            grid-column: 2/3;
-            justify-content: end;
-        }
+		&__box {
+			display: grid;
+			grid-column: 2/3;
+			justify-content: end;
 
-        &__title {
-            padding: 0 1em;
-        }
+			&-img,
+			&-text {
+				max-width: 500px;
+				max-height: 340px;
+			}
+		}
 
-        &__box-img,
-        &__box-text {
-            max-width: 500px;
-            max-height: 340px;
-        }
+		&__title {
+			padding: 0 1em;
+		}
 
-        &__bg-icon {
-            position: absolute;
-            display: block;
-            opacity: 0.05;
+		&__bg-icon {
+			position: absolute;
+			display: block;
+			opacity: 0.05;
 
-            &--one {
-                top: 14%;
-                width: 20%;
-                animation: rotate-right 160s infinite linear;
-            }
-            
-            &--two {
-                bottom: 10%;
-                left: 10%;
-                width: 30%;
-                animation: rotate-left 140s infinite linear;
-            }
-            
-            &--three {
-                top: 26%;
-                left: 16%;
-                width: 50%;
-                animation: rotate-right 160s infinite linear;
-            }
-            
-            &--four {
-                top: 55%;
-                left: -10%;
-                width: 15%;
-                animation: rotate-left 140s infinite linear;
-            }
-        }
-    }
+			&--one {
+				top: 14%;
+				width: 20%;
+				animation: rotate-right 160s infinite linear;
+			}
 
-    .gallery {
-        &__mobile {
-            grid-template-columns: repeat(2, 1fr);
-             img {
-                height: 50rem;
+			&--two {
+				bottom: 10%;
+				left: 10%;
+				width: 30%;
+				animation: rotate-left 140s infinite linear;
+			}
 
-                &:nth-child(1) {
-                    display: none;
-                }
+			&--three {
+				top: 26%;
+				left: 16%;
+				width: 50%;
+				animation: rotate-right 160s infinite linear;
+			}
 
-                &:nth-child(4) {
-                    display: none;
-                }
-             }
-        }
-    }
+			&--four {
+				top: 55%;
+				left: -10%;
+				width: 15%;
+				animation: rotate-left 140s infinite linear;
+			}
+		}
+	}
+
+	.gallery {
+		&__mobile {
+			grid-template-columns: repeat(2, 1fr);
+			img {
+				height: 50rem;
+
+				&:nth-child(1) {
+					display: none;
+				}
+
+				&:nth-child(4) {
+					display: none;
+				}
+			}
+		}
+	}
 }
