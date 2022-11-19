@@ -32,7 +32,7 @@ const handleNav = () => {
     scrollBlockNavBtn()
 }
 
-const msgFilter = () => {
+const msgBtnAction = () => {
     if(userName.value !== '' && userMsg.value !== '' && userEmail.value !== '') {
         contactBtn.textContent = 'Sent!',
         userName.value = ''
@@ -57,5 +57,5 @@ const currentYear = () => {
 currentYear()
 
 
-contactBtn.addEventListener('click', msgFilter)
+contactBtn.addEventListener('click', msgBtnAction)
 navBtn.addEventListener('click', handleNav)
