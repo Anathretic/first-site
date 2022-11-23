@@ -38,14 +38,14 @@ const msgBtnAction = () => {
         userName.value = ''
         userEmail.value = ''
         userMsg.value = ''
-        errorMsg.textContent = ''
+        errorMsg.classList.add('error-toggle')
 
         setTimeout(() => {
             contactBtn.textContent = 'Send'
-        }, 3000)
+        }, 2500)
 
     } else {
-        errorMsg.textContent = 'We need more information..'
+        errorMsg.classList.remove('error-toggle')
     }
 }
 

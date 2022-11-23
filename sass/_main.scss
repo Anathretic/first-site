@@ -21,6 +21,10 @@ body {
 	color: colors.$white-color;
 }
 
+.error-toggle {
+	visibility: hidden;
+}
+
 .wrapper {
 	margin: 0 auto;
 	max-width: 1200px;
