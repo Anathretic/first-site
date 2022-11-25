@@ -34,7 +34,7 @@ const handleNav = () => {
 
 const msgBtnAction = () => {
     if(userName.value !== '' && userMsg.value !== '' && userEmail.value !== '') {
-        contactBtn.textContent = 'Sent!',
+        contactBtn.textContent = 'Message sent!',
         userName.value = ''
         userEmail.value = ''
         userMsg.value = ''
