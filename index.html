@@ -217,19 +217,22 @@
                 <form class="contact__form">
                     <div class="contact__form-box">
                         <label for="name">Your name:</label>
-                        <input type="text" id="name">
+                        <input type="text" id="name" placeholder="Enter your name..">
                     </div>
                     <div class="contact__form-box">
-                        <label for="email">Your email:</label>
-                        <input type="text" id="email">
+                        <label for="email">Your e-mail:</label>
+                        <input type="text" id="email" placeholder="Enter your e-mail..">
                     </div>
                     <div class="contact__form-box">
                         <label for="msg">Message:</label>
-                        <textarea id="msg" cols="30" rows="10"></textarea>
+                        <textarea id="msg" cols="30" rows="10" placeholder="Write it.."></textarea>
                     </div>
                 </form>
                 <button type="submit" class="contact__form-btn">Send</button>
-                <p class="contact__form-error error-toggle">We need more information...</p>
+                <div class="contact__form-error error-toggle">
+                    <p>We need more information...</p>
+                    <p>Or correct e-mail...</p>
+                </div>
             </div>
         </section>
         

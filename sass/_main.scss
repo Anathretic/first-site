@@ -426,6 +426,7 @@ body {
 				padding: 1em 2em;
 				margin-bottom: 2em;
 				width: 100%;
+				font-family: 'Nunito', sans-serif;
 				color: colors.$white-color;
 				background: none;
 				border: 1px solid rgba(255, 255, 255, 0.1);
@@ -463,11 +464,13 @@ body {
 			cursor: pointer;
 			transition: background-color 0.3s, color 0.3s;
 
-			&:hover,
-			&:focus {
-				outline: none;
+			&:hover {
 				background-color: colors.$special-color;
 				color: colors.$dark-color;
+			}
+
+			&:focus {
+				outline: none;
 			}
 		}
 

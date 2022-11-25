@@ -423,6 +423,7 @@ body {
   padding: 1em 2em;
   margin-bottom: 2em;
   width: 100%;
+  font-family: "Nunito", sans-serif;
   color: #ffffff;
   background: none;
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -455,10 +456,12 @@ body {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-.contact__form-btn:hover, .contact__form-btn:focus {
-  outline: none;
+.contact__form-btn:hover {
   background-color: #FF1E56;
   color: #232323;
+}
+.contact__form-btn:focus {
+  outline: none;
 }
 .contact__form-error {
   padding: 2em 0;

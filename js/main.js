@@ -8,6 +8,7 @@ const userEmail = document.querySelector('#email')
 const userMsg = document.querySelector('#msg')
 const errorMsg = document.querySelector('.contact__form-error')
 const contactBtn = document.querySelector('.contact__form-btn')
+const emailCheck = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm
 
 const scrollBlockNavBtn = () => {
     if(body.classList.contains('scroll-block')) {
@@ -33,7 +34,7 @@ const handleNav = () => {
 }
 
 const msgBtnAction = () => {
-    if(userName.value !== '' && userMsg.value !== '' && userEmail.value !== '') {
+    if(userName.value !== '' && userMsg.value !== '' && emailCheck.test(userEmail.value)) {
         contactBtn.textContent = 'Message sent!',
         userName.value = ''
         userEmail.value = ''
