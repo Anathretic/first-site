@@ -5,10 +5,10 @@ const allNavItems = document.querySelectorAll('.nav__link')
 const actualYear = document.querySelector('.footer__year')
 const newsletterBtn = document.querySelector('.newsletter__form-btn')
 const newsletterInput = document.querySelector('.newsletter__form-input')
-const userName = document.querySelector('#name')
-const userEmail = document.querySelector('#email')
-const userMsg = document.querySelector('#msg')
-const errorMsg = document.querySelector('.contact__form-error')
+const contactUsername = document.querySelector('#name')
+const contactUserEmail = document.querySelector('#email')
+const contactUserMsg = document.querySelector('#msg')
+const contactErrorMsg = document.querySelector('.contact__form-error')
 const contactBtn = document.querySelector('.contact__form-btn')
 const emailCheck = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/gm
 
@@ -49,19 +49,19 @@ const newsletterCheck = () => {
 }
 
 const contactBtnAction = () => {
-    if(userName.value !== '' && userMsg.value !== '' && emailCheck.test(userEmail.value)) {
+    if(contactUsername.value !== '' && contactUserMsg.value !== '' && emailCheck.test(contactUserEmail.value)) {
         contactBtn.textContent = 'Message sent!',
-        userName.value = ''
-        userEmail.value = ''
-        userMsg.value = ''
-        errorMsg.classList.add('error-toggle')
+        contactUsername.value = ''
+        contactUserEmail.value = ''
+        contactUserMsg.value = ''
+        contactErrorMsg.classList.add('error-toggle')
 
         setTimeout(() => {
             contactBtn.textContent = 'Send'
         }, 2500)
 
     } else {
-        errorMsg.classList.remove('error-toggle')
+        contactErrorMsg.classList.remove('error-toggle')
     }
 }
 
