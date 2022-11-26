@@ -3,6 +3,8 @@ const navMobile = document.querySelector('.nav-mobile')
 const navBtn = document.querySelector('.hamburger')
 const allNavItems = document.querySelectorAll('.nav__link')
 const actualYear = document.querySelector('.footer__year')
+const newsletterBtn = document.querySelector('.newsletter__form-btn')
+const newsletterInput = document.querySelector('.newsletter__form-input')
 const userName = document.querySelector('#name')
 const userEmail = document.querySelector('#email')
 const userMsg = document.querySelector('#msg')
@@ -33,7 +35,20 @@ const handleNav = () => {
     scrollBlockNavBtn()
 }
 
-const msgBtnAction = () => {
+const newsletterCheck = () => {
+    if(emailCheck.test(newsletterInput.value)) {
+        newsletterBtn.textContent = 'Got it!'
+        newsletterInput.value = ''
+    } else {
+        newsletterBtn.textContent = 'Incorrect..'
+    }
+
+    setTimeout(() => {
+        newsletterBtn.textContent = 'Subscribe!'
+    }, 2500)
+}
+
+const contactBtnAction = () => {
     if(userName.value !== '' && userMsg.value !== '' && emailCheck.test(userEmail.value)) {
         contactBtn.textContent = 'Message sent!',
         userName.value = ''
@@ -57,6 +72,6 @@ const currentYear = () => {
 
 currentYear()
 
-
-contactBtn.addEventListener('click', msgBtnAction)
+newsletterBtn.addEventListener('click', newsletterCheck)
+contactBtn.addEventListener('click', contactBtnAction)
 navBtn.addEventListener('click', handleNav)

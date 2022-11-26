@@ -334,14 +334,14 @@ body {
   font-size: 4rem;
   font-weight: 200;
 }
-.newsletter__form input {
+.newsletter__form-input {
   padding: 1em;
   margin-bottom: 1em;
   width: 100%;
   background-color: #ffffff;
   border: 1px solid transparent;
 }
-.newsletter__form button {
+.newsletter__form-btn {
   padding: 1em;
   font-size: 1.5rem;
   background: none;
@@ -351,7 +351,7 @@ body {
   cursor: pointer;
   transition: background-color 0.3s, color 0.3s;
 }
-.newsletter__form button:hover {
+.newsletter__form-btn:hover {
   background-color: #ffffff;
   color: #FF1E56;
 }
