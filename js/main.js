@@ -42,7 +42,6 @@ const newsletterCheck = () => {
         newsletterInput.value = ''
     } else {
         newsletterBtn.textContent = 'Incorrect..'
-        newsletterInput.value = ''
     }
 
     setTimeout(() => {
