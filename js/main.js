@@ -12,6 +12,8 @@ const contactErrorMsg = document.querySelector('.contact__form-error')
 const contactBtn = document.querySelector('.contact__form-btn')
 const emailCheck = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
 
+const inputsArr = [contactUsername, contactUserEmail, contactUserMsg]
+
 const scrollBlockNavBtn = () => {
     if(body.classList.contains('scroll-block')) {
         body.classList.remove('scroll-block')
@@ -53,9 +55,9 @@ const contactBtnAction = () => {
 
     if(contactUsername.value !== '' && contactUserMsg.value !== '' && emailCheck.test(contactUserEmail.value)) {
         contactBtn.textContent = 'Message sent!',
-        contactUsername.value = ''
-        contactUserEmail.value = ''
-        contactUserMsg.value = ''
+        inputsArr.forEach(el => {
+            el.value = ''
+        })
         contactErrorMsg.classList.add('error-toggle')
 
         setTimeout(() => {
