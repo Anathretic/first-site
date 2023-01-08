@@ -10,6 +10,12 @@
 		}
 	}
 
+	.return__arrow {
+		right: 3rem;
+		bottom: 3rem;
+		padding: 1.5em;
+	}
+
 	.header {
 		grid-template-rows: auto repeat(2, 1fr);
 

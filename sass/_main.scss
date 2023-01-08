@@ -35,6 +35,18 @@ body {
 	overflow: hidden;
 }
 
+.return__arrow {
+	display: none;
+	position: fixed;
+	right: 1rem;
+	bottom: 1rem;
+	padding: 1em;
+	border-radius: 50%;
+	background-color: colors.$white-color;
+	animation: arrow-up-animation 1s forwards;
+	z-index: 9;
+}
+
 .hr {
 	border-color: colors.$special-color;
 	margin-bottom: 1.8em;

@@ -12,6 +12,7 @@ let CONTACT_ERROR_MSG
 let CONTACT_BTN
 let EMAIL_CHECK
 let INPUTS_ARR
+let RETURN_ARROW
 
 const main = () => {
     prepareDOMElements()
@@ -31,12 +32,14 @@ const prepareDOMElements = () => {
     CONTACT_ERROR_MSG = document.querySelector('.contact__form-error')
     CONTACT_BTN = document.querySelector('.contact__form-btn')
     ACTUAL_YEAR = document.querySelector('.footer__year')
+	RETURN_ARROW = document.querySelector('.return__arrow')
     EMAIL_CHECK = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
     INPUTS_ARR = [CONTACT_USERNAME, CONTACT_USER_EMAIL, CONTACT_USER_MSG]
 }
 
 const prepareDOMEvents = () => {
 	currentYear()
+	window.addEventListener('scroll', showArrow)
 	NEWSLETTER_BTN.addEventListener('click', newsletterCheck)
 	CONTACT_BTN.addEventListener('click', contactBtnAction)
 	NAV_BTN.addEventListener('click', handleNav)
@@ -92,6 +95,16 @@ const contactBtnAction = () => {
 	} else {
 		CONTACT_ERROR_MSG.classList.remove('error-toggle')
 	}
+}
+
+const showArrow = () => {
+	if(window.scrollY > 150) {
+		RETURN_ARROW.style.display = 'block'
+	} else {
+		RETURN_ARROW.style.display = 'none'
+	}
+
+	RETURN_ARROW.classList.toggle('arrow-up-animation')
 }
 
 const currentYear = () => {
