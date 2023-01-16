@@ -79,9 +79,9 @@
 	}
 
 	.nav {
+		padding: 1em;
 		grid-column: 1/2;
 		grid-row: 1/2;
-		padding: 1em;
 
 		&-desktop {
 			display: block;

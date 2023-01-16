@@ -36,10 +36,10 @@ body {
 }
 
 .return__arrow {
-	display: none;
 	position: fixed;
 	right: 1rem;
 	bottom: 1rem;
+	display: none;
 	padding: 1em;
 	border-radius: 50%;
 	background-color: colors.$white-color;
@@ -48,17 +48,17 @@ body {
 }
 
 .hr {
-	border-color: colors.$special-color;
 	margin-bottom: 1.8em;
+	border-color: colors.$special-color;
 }
 
 .section-title {
 	position: relative;
 	margin: 0 auto 2em;
-	font-size: 3.2rem;
-	font-weight: 200;
 	width: fit-content;
 	color: colors.$special-color;
+	font-size: 3.2rem;
+	font-weight: 200;
 
 	&::before {
 		content: '';
@@ -76,20 +76,20 @@ body {
 }
 
 .header {
+	position: relative;
 	display: grid;
 	grid-template-columns: repeat(2, 1fr);
 	grid-template-rows: repeat(2, 1fr);
 	height: 100vh;
-	position: relative;
 	overflow: hidden;
 
 	&__text {
 		display: grid;
 		justify-content: center;
 		align-content: center;
+		padding: 2em;
 		grid-column: 1/3;
 		grid-row: 2/3;
-		padding: 2em;
 
 		p {
 			font-weight: 200;
@@ -106,11 +106,11 @@ body {
 	}
 
 	&__img {
-		grid-column: 1/3;
-		grid-row: 1/2;
 		position: relative;
 		width: 100%;
 		height: 100%;
+		grid-column: 1/3;
+		grid-row: 1/2;
 		background-image: url('../img/header_small.jpg');
 		background-position: center;
 		background-size: cover;
@@ -192,10 +192,10 @@ body {
 		display: inline-block;
 		margin: 0.5em;
 		padding: 0.5em;
+		color: colors.$black-color;
 		font-size: 2.3rem;
 		text-transform: uppercase;
 		text-decoration: none;
-		color: colors.$black-color;
 		transition: color 0.3s;
 
 		&:hover {
@@ -268,8 +268,8 @@ body {
 
 		h3 {
 			margin-bottom: 0.4em;
-			text-transform: uppercase;
 			color: colors.$special-color;
+			text-transform: uppercase;
 		}
 
 		p {
@@ -303,10 +303,10 @@ body {
 
 		&-title {
 			margin: 0.3em 0;
-			font-size: 2.6rem;
-			text-transform: uppercase;
 			color: colors.$special-color;
+			font-size: 2.6rem;
 			font-weight: 200;
+			text-transform: uppercase;
 			text-align: center;
 		}
 
@@ -343,13 +343,13 @@ body {
 
 		&-btn {
 			padding: 1em;
-			font-size: 1.5rem;
+			color: colors.$white-color;
 			background: none;
 			border: 1px solid colors.$white-color;
-			color: colors.$white-color;
+			font-size: 1.5rem;
 			font-weight: bold;
-			cursor: pointer;
 			transition: background-color 0.3s, color 0.3s;
+			cursor: pointer;
 
 			&:hover {
 				background-color: colors.$white-color;
@@ -366,12 +366,12 @@ body {
 	&__box {
 		margin: 1em 0;
 		padding: 2em 1m;
+		background-color: colors.$dark-color;
 		text-align: center;
 		border: 1px solid transparent;
 		border-radius: 8px;
-		background-color: colors.$dark-color;
-		cursor: pointer;
 		transition: background-color 0.5s, border 0.3s;
+		cursor: pointer;
 
 		&:hover {
 			background-color: colors.$darker-color;
@@ -389,8 +389,8 @@ body {
 		&-name {
 			margin-top: 1em;
 			margin-bottom: 1em;
-			font-size: 1.8rem;
 			color: colors.$special-color;
+			font-size: 1.8rem;
 		}
 	}
 }
@@ -401,10 +401,10 @@ body {
 		grid-template-columns: 1fr, 1fr;
 
 		img {
-			background-size: cover;
-			background-position: center;
 			height: 50rem;
 			width: 100%;
+			background-size: cover;
+			background-position: center;
 		}
 	}
 
@@ -440,10 +440,10 @@ body {
 				padding: 1em 2em;
 				margin-bottom: 2em;
 				width: 100%;
-				font-family: 'Nunito', sans-serif;
 				color: colors.$white-color;
 				background: none;
 				border: 1px solid rgba(255, 255, 255, 0.1);
+				font-family: 'Nunito', sans-serif;
 
 				&:focus {
 					outline: none;
@@ -468,15 +468,15 @@ body {
 		}
 
 		&-btn {
+			padding: 1em;
 			grid-column: 1/3;
 			grid-row: 4/5;
-			padding: 1em;
-			border: 1px solid colors.$special-color;
-			background: none;
-			font-weight: bold;
 			color: colors.$special-color;
-			cursor: pointer;
+			background: none;
+			border: 1px solid colors.$special-color;
+			font-weight: bold;
 			transition: background-color 0.3s, color 0.3s;
+			cursor: pointer;
 
 			&:hover {
 				background-color: colors.$special-color;
@@ -490,17 +490,17 @@ body {
 
 		&-error {
 			padding: 2em 0;
+			color: colors.$special-color;
 			font-size: 1.8rem;
 			text-align: center;
-			color: colors.$special-color;
 		}
 	}
 }
 
 .footer {
-	font-size: 2rem;
 	padding: 3em 1em;
 	border-top: 1px solid colors.$darker-color;
+	font-size: 2rem;
 	text-align: center;
 
 	&__special-text {
@@ -516,9 +516,9 @@ body {
 		padding: 1em 1em;
 
 		.fa-brands {
-			font-size: 3rem;
 			padding: 0 0.8em;
 			color: colors.$white-color;
+			font-size: 3rem;
 			transition: transform 0.3s, color 0.3s;
 
 			&:hover {

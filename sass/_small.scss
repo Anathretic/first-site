@@ -21,8 +21,8 @@
 
 		&__box {
 			display: grid;
-			grid-column: 2/3;
 			justify-content: end;
+			grid-column: 2/3;
 
 			&-img,
 			&-text {
@@ -36,8 +36,8 @@
 		}
 
 		&__bg-icon {
-			position: absolute;
 			display: block;
+			position: absolute;
 			opacity: 0.05;
 
 			&--one {
