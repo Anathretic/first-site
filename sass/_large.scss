@@ -35,14 +35,14 @@
 		&__img {
 			grid-column: 2/3;
 			grid-row: 1/4;
-			background-image: url('../img/header_big.jpg');
+			background-image: url('/img/header_big.jpg');
 		}
 
 		&__arrow {
-			display: block;
 			position: absolute;
 			bottom: 3em;
 			left: 48%;
+			display: block;
 			padding: 2em;
 			transform: translateX(-50%);
 			border: 1px solid colors.$white-color;

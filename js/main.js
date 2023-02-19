@@ -13,50 +13,60 @@ let CONTACT_BTN
 let EMAIL_CHECK
 let INPUTS_ARR
 let RETURN_ARROW
+let COOKIE_BOX
+let COOKIE_BOX_BTN
 
 const main = () => {
-    prepareDOMElements()
-    prepareDOMEvents()
+	prepareDOMElements()
+	prepareDOMEvents()
 }
 
 const prepareDOMElements = () => {
-    BODY = document.querySelector('body')
-    NAV_MOBILE = document.querySelector('.nav-mobile')
-    NAV_BTN = document.querySelector('.hamburger')
-    ALL_NAV_ITEMS = document.querySelectorAll('.nav__link')
-    NEWSLETTER_BTN = document.querySelector('.newsletter__form-btn')
-    NEWSLETTER_INPUT = document.querySelector('.newsletter__form-input')
-    CONTACT_USERNAME = document.querySelector('#name')
-    CONTACT_USER_EMAIL = document.querySelector('#email')
-    CONTACT_USER_MSG = document.querySelector('#msg')
-    CONTACT_ERROR_MSG = document.querySelector('.contact__form-error')
-    CONTACT_BTN = document.querySelector('.contact__form-btn')
-    ACTUAL_YEAR = document.querySelector('.footer__year')
+	BODY = document.querySelector('body')
+	NAV_MOBILE = document.querySelector('.nav-mobile')
+	NAV_BTN = document.querySelector('.hamburger')
+	ALL_NAV_ITEMS = document.querySelectorAll('.nav__link')
+	NEWSLETTER_BTN = document.querySelector('.newsletter__form-btn')
+	NEWSLETTER_INPUT = document.querySelector('.newsletter__form-input')
+	CONTACT_USERNAME = document.querySelector('#name')
+	CONTACT_USER_EMAIL = document.querySelector('#email')
+	CONTACT_USER_MSG = document.querySelector('#msg')
+	CONTACT_ERROR_MSG = document.querySelector('.contact__form-error')
+	CONTACT_BTN = document.querySelector('.contact__form-btn')
+	ACTUAL_YEAR = document.querySelector('.footer__year')
 	RETURN_ARROW = document.querySelector('.return__arrow')
-    EMAIL_CHECK = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
-    INPUTS_ARR = [CONTACT_USERNAME, CONTACT_USER_EMAIL, CONTACT_USER_MSG]
+	COOKIE_BOX = document.querySelector('.cookie-box')
+	COOKIE_BOX_BTN = document.querySelector('.cookie-box__btn')
+	EMAIL_CHECK = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/i
+	INPUTS_ARR = [CONTACT_USERNAME, CONTACT_USER_EMAIL, CONTACT_USER_MSG]
 }
 
 const prepareDOMEvents = () => {
-	currentYear()
 	window.addEventListener('scroll', showArrow)
 	NEWSLETTER_BTN.addEventListener('click', newsletterCheck)
-	CONTACT_BTN.addEventListener('click', contactBtnAction)
+	CONTACT_BTN.addEventListener('click', contactCheck)
 	NAV_BTN.addEventListener('click', handleNav)
+	COOKIE_BOX_BTN.addEventListener('click', handleCookieBox)
+	currentYear()
+	showCookie()
 }
 
-const scrollBlockNavBtn = () => {
-	if (BODY.classList.contains('scroll-block')) {
-		BODY.classList.remove('scroll-block')
-	} else {
-		BODY.classList.add('scroll-block')
+const showCookie = () => {
+	const cookieItem = localStorage.getItem('cookie')
+	if(cookieItem) {
+		COOKIE_BOX.classList.add('hide-cookies')
 	}
+}
+
+const handleCookieBox = () => {
+	localStorage.setItem('cookie', 'true')
+	COOKIE_BOX.classList.add('hide-cookies')
 }
 
 const handleNav = () => {
 	NAV_MOBILE.classList.toggle('nav-mobile--active')
 	NAV_BTN.classList.toggle('is-active')
-
+	
 	ALL_NAV_ITEMS.forEach(item => {
 		item.addEventListener('click', () => {
 			NAV_MOBILE.classList.remove('nav-mobile--active')
@@ -64,8 +74,16 @@ const handleNav = () => {
 			BODY.classList.remove('scroll-block')
 		})
 	})
+	
+	handleScroll()
+}
 
-	scrollBlockNavBtn()
+const handleScroll = () => {
+	if (BODY.classList.contains('scroll-block')) {
+		BODY.classList.remove('scroll-block')
+	} else {
+		BODY.classList.add('scroll-block')
+	}
 }
 
 const newsletterCheck = () => {
@@ -81,7 +99,7 @@ const newsletterCheck = () => {
 	}, 2500)
 }
 
-const contactBtnAction = () => {
+const contactCheck = () => {
 	if (CONTACT_USERNAME.value !== '' && CONTACT_USER_MSG.value !== '' && EMAIL_CHECK.test(CONTACT_USER_EMAIL.value)) {
 		;(CONTACT_BTN.textContent = 'Message sent!'),
 			INPUTS_ARR.forEach(el => {
@@ -98,7 +116,7 @@ const contactBtnAction = () => {
 }
 
 const showArrow = () => {
-	if(window.scrollY > 150) {
+	if (window.scrollY > 150) {
 		RETURN_ARROW.style.display = 'block'
 	} else {
 		RETURN_ARROW.style.display = 'none'
