@@ -96,9 +96,9 @@ body {
   padding: 0.5em 1em;
   background-color: #FF1E56;
   color: #ffffff;
-  border: 2px solid #323232;
+  border: 2px solid #c40031;
   border-radius: 5px;
-  box-shadow: 1px 1px 10px #000000;
+  box-shadow: 1px 1px 5px #000000;
   font-size: 1.6rem;
   transition: background-color 0.3s;
   cursor: pointer;
@@ -395,11 +395,11 @@ body {
   color: #FF1E56;
 }
 
-.prices {
+.packages {
   padding: 6em 2em;
   background-color: #191919;
 }
-.prices__box {
+.packages__box {
   margin: 1em 0;
   padding: 2em 1m;
   background-color: #232323;
@@ -409,17 +409,17 @@ body {
   transition: background-color 0.5s, border 0.3s;
   cursor: pointer;
 }
-.prices__box:hover {
+.packages__box:hover {
   background-color: #191919;
   border: 1px solid #FF1E56;
 }
-.prices__item {
+.packages__item {
   margin: 1em 0;
 }
-.prices__item p {
+.packages__item p {
   padding: 0.5em;
 }
-.prices__item-name {
+.packages__item-name {
   margin-top: 1em;
   margin-bottom: 1em;
   color: #FF1E56;
@@ -646,21 +646,21 @@ body {
   .newsletter__form input {
     margin-bottom: 0;
   }
-  .prices {
+  .packages {
     padding: 8em 2em;
   }
-  .prices__box {
+  .packages__box {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(4, 1fr);
   }
-  .prices__item {
+  .packages__item {
     margin: 0 1em;
   }
-  .prices__item h3 {
+  .packages__item h3 {
     margin-top: 0;
   }
-  .prices__item-name {
+  .packages__item-name {
     margin-top: 0;
     margin-bottom: 0;
   }
