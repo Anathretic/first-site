@@ -75,10 +75,10 @@ body {
 		font-size: 1.6rem;
 		transition: background-color 0.3s;
 		cursor: pointer;
-	}
 
-	&__btn:hover {
-		background-color: colors.$special-dark-color;
+		&:hover {
+			background-color: colors.$special-dark-color;
+		}
 	}
 }
 
