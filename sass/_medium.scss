@@ -41,12 +41,12 @@
 			margin-bottom: 0;
 		}
 
-		&__form {
+		&__box {
 			display: grid;
 			grid-template-columns: 3fr 1fr;
 			gap: 2em;
 
-			input {
+			&-input {
 				margin-bottom: 0;
 			}
 		}
@@ -76,13 +76,13 @@
 	}
 
 	.gallery {
-		&__mobile {
+		&-mobile {
 			img {
 				display: none;
 			}
 		}
 
-		&__desktop {
+		&-desktop {
 			img {
 				display: block;
 				width: 100%;

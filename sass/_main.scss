@@ -385,7 +385,7 @@ body {
 		font-weight: 200;
 	}
 
-	&__form {
+	&__box {
 		&-input {
 			margin-bottom: 2em;
 			padding: 1em;
@@ -449,7 +449,7 @@ body {
 }
 
 .gallery {
-	&__mobile {
+	&-mobile {
 		display: grid;
 		grid-template-columns: 1fr, 1fr;
 
@@ -461,7 +461,7 @@ body {
 		}
 	}
 
-	&__desktop {
+	&-desktop {
 		img {
 			display: none;
 		}

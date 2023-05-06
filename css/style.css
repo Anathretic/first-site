@@ -373,14 +373,14 @@ body {
   font-size: 4rem;
   font-weight: 200;
 }
-.newsletter__form-input {
+.newsletter__box-input {
   margin-bottom: 2em;
   padding: 1em;
   width: 100%;
   background-color: #ffffff;
   border: 1px solid transparent;
 }
-.newsletter__form-btn {
+.newsletter__box-btn {
   padding: 1em;
   background: none;
   color: #ffffff;
@@ -390,7 +390,7 @@ body {
   transition: background-color 0.3s, color 0.3s;
   cursor: pointer;
 }
-.newsletter__form-btn:hover {
+.newsletter__box-btn:hover {
   background-color: #ffffff;
   color: #FF1E56;
 }
@@ -426,17 +426,17 @@ body {
   font-size: 1.8rem;
 }
 
-.gallery__mobile {
+.gallery-mobile {
   display: grid;
   grid-template-columns: 1fr, 1fr;
 }
-.gallery__mobile img {
+.gallery-mobile img {
   height: 50rem;
   width: 100%;
   background-size: cover;
   background-position: center;
 }
-.gallery__desktop img {
+.gallery-desktop img {
   display: none;
 }
 
@@ -594,16 +594,16 @@ body {
     width: 15%;
     animation: rotate-left 140s infinite linear;
   }
-  .gallery__mobile {
+  .gallery-mobile {
     grid-template-columns: repeat(2, 1fr);
   }
-  .gallery__mobile img {
+  .gallery-mobile img {
     height: 50rem;
   }
-  .gallery__mobile img:nth-child(1) {
+  .gallery-mobile img:nth-child(1) {
     display: none;
   }
-  .gallery__mobile img:nth-child(4) {
+  .gallery-mobile img:nth-child(4) {
     display: none;
   }
 }
@@ -638,12 +638,12 @@ body {
   .newsletter__text {
     margin-bottom: 0;
   }
-  .newsletter__form {
+  .newsletter__box {
     display: grid;
     grid-template-columns: 3fr 1fr;
     gap: 2em;
   }
-  .newsletter__form input {
+  .newsletter__box-input {
     margin-bottom: 0;
   }
   .packages {
@@ -664,10 +664,10 @@ body {
     margin-top: 0;
     margin-bottom: 0;
   }
-  .gallery__mobile img {
+  .gallery-mobile img {
     display: none;
   }
-  .gallery__desktop img {
+  .gallery-desktop img {
     display: block;
     width: 100%;
     height: 100%;
@@ -715,11 +715,11 @@ body {
     grid-column: 1/2;
     grid-row: 2/4;
   }
-  .header__text h1 {
-    font-size: 6rem;
-  }
   .header__text p {
     font-size: 1.8rem;
+  }
+  .header__title {
+    font-size: 6rem;
   }
   .header__img {
     grid-column: 2/3;
