@@ -21,10 +21,6 @@ body {
 	font-size: 1.6rem;
 }
 
-main {
-	overflow: hidden;
-}
-
 .error-toggle {
 	visibility: hidden;
 }
@@ -263,7 +259,6 @@ main {
 
 .cards {
 	background-color: colors.$darker-color;
-	overflow: hidden;
 
 	&__box {
 		display: grid;
@@ -271,6 +266,7 @@ main {
 		grid-template-rows: 1fr;
 		gap: 2em;
 		padding: 6em 2em;
+		overflow: hidden;
 	}
 
 	&__card {
