@@ -21,6 +21,10 @@ body {
 	font-size: 1.6rem;
 }
 
+main {
+	overflow: hidden;
+}
+
 .error-toggle {
 	visibility: hidden;
 }
@@ -229,7 +233,7 @@ body {
 		transform: translateX(-102%);
 		background-color: colors.$white-color;
 		transition: transform 0.3s;
-		z-index: 10;
+		z-index: 20;
 
 		&--active {
 			transform: translateX(0);

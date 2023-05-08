@@ -1,3 +1,10 @@
+@media (max-width: 280px) {
+	.cards{
+		&__card {
+			width: 85%;
+		}
+	}
+}
 @media (min-width: 376px) {
 	.gallery {
 		img {

@@ -1,17 +1,17 @@
 @keyframes rotate-right {
   from {
-    transform: rotate(360deg);
+    transform: rotate(0);
   }
   to {
-    transform: rotate(0);
+    transform: rotate(360deg);
   }
 }
 @keyframes rotate-left {
   from {
-    transform: rotate(-360deg);
+    transform: rotate(0);
   }
   to {
-    transform: rotate(0);
+    transform: rotate(-360deg);
   }
 }
 @keyframes pulse {
@@ -48,6 +48,10 @@ body {
   color: #ffffff;
   font-family: "Nunito", sans-serif;
   font-size: 1.6rem;
+}
+
+main {
+  overflow: hidden;
 }
 
 .error-toggle {
@@ -240,7 +244,7 @@ body {
   transform: translateX(-102%);
   background-color: #ffffff;
   transition: transform 0.3s;
-  z-index: 10;
+  z-index: 20;
 }
 .nav-mobile--active {
   transform: translateX(0);
@@ -536,6 +540,11 @@ body {
   color: #FF1E56;
 }
 
+@media (max-width: 280px) {
+  .cards__card {
+    width: 85%;
+  }
+}
 @media (min-width: 376px) {
   .gallery img {
     height: 65rem;
