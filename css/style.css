@@ -240,7 +240,7 @@ body {
   transform: translateX(-102%);
   background-color: #ffffff;
   transition: transform 0.3s;
-  z-index: 20;
+  z-index: 10;
 }
 .nav-mobile--active {
   transform: translateX(0);
@@ -761,12 +761,12 @@ body {
     width: 10%;
   }
   .nav {
+    padding: 1em;
     grid-column: 1/2;
     grid-row: 1/2;
   }
   .nav-desktop {
     display: block;
-    padding: 1em;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   }
   .nav__link {

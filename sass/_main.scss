@@ -229,7 +229,7 @@ body {
 		transform: translateX(-102%);
 		background-color: colors.$white-color;
 		transition: transform 0.3s;
-		z-index: 20;
+		z-index: 10;
 
 		&--active {
 			transform: translateX(0);
