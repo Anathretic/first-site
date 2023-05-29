@@ -11,10 +11,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@300;500;700&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/e3d334fd4a.js" crossorigin="anonymous"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="shortcut icon" href="dist/img/icons/cog-shortcut.svg">
     <link rel="stylesheet" href="dist/css/hamburger.min.css">
     <link rel="stylesheet" href="dist/css/style.min.css">
-    <link rel="shortcut icon" href="dist/img/icons/cog-shortcut.svg">
-    <script src="https://kit.fontawesome.com/e3d334fd4a.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
@@ -47,12 +48,12 @@
             </div>
         </nav>
 
-        <div class="header__text">
+        <div data-aos="fade-up" data-aos-delay='100' class="header__text">
             <h1 class="header__title">cars<span>Tuning</span></h1>
-            <p>Do you wanna improve your ride?</p>
+            <p >Do you wanna improve your ride?</p>
         </div>
 
-        <div class="header__img">
+        <div data-aos="fade-down" data-aos-delay="100" class="header__img">
             <div class="header__shadow"></div>
         </div>
 
@@ -76,8 +77,8 @@
     <main class="main">
         <section class="cards" id="cards">
             <div class="wrapper">
-                <div class="cards__box">
-                    <div class="cards__card cards__card--one">
+                <div class="cards__box" data-aos="fade-up" data-aos-delay="100">
+                    <div class="cards__card cards__card--one" >
                         <div class="cards__card-img"><i class="fa-solid fa-car-battery"></i></div>
                         <h3>stage i</h3>
                         <p>Initial engine diagnostics and tuning</p>
@@ -108,7 +109,7 @@
                     <h2 class="section-title">our<span>Little</span>Story</h2>
                 </div>
                 <div class="about__boxes">
-                    <div class="about__box">
+                    <div data-aos="fade-up" data-aos-delay="100" class="about__box">
                         <img src="dist/img/about-us-1.jpg" alt="A man who checks a car engine" class="about__box-img">
                         <h3 class="about__box-title">i</h3>
                         <p class="about__box-text">Cars Tuning is a decent family business built on strong foundation
@@ -119,7 +120,7 @@
                             and it was just a beginning..</p>
                     </div>
                     <hr class="hr">
-                    <div class="about__box">
+                    <div data-aos="fade-up" data-aos-delay="150" class="about__box">
                         <img src="dist/img/about-us-2.jpg" alt="Car engine" class="about__box-img">
                         <h3 class="about__box-title">ii</h3>
                         <p class="about__box-text">Boys grew up, just like their passion. The milestone has come! It was
@@ -130,7 +131,7 @@
                             some money in the necessary equipment.</p>
                     </div>
                     <hr class="hr">
-                    <div class="about__box">
+                    <div data-aos="fade-up" data-aos-delay="200" class="about__box">
                         <img src="dist/img/about-us-3.jpg" alt="Car rear bumper with heart-shaped exhaust pipe"
                             class="about__box-img">
                         <h3 class="about__box-title">iii</h3>
@@ -152,55 +153,57 @@
         <section class="packages" id="packages">
             <div class="wrapper">
                 <h2 class="section-title">only<span>Spec</span>Packs</h2>
-                <div class="packages__box">
-                    <div class="packages__item packages__item-name">
-                        <h3>#speed</h3>
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <div class="packages__box">
+                        <div class="packages__item packages__item-name">
+                            <h3>#speed</h3>
+                        </div>
+                        <div class="packages__item packages__item-money">
+                            <p><b>Price:</b></p>
+                            <p>$2000</p>
+                        </div>
+                        <div class="packages__item packages__item-term">
+                            <p><b>Duration:</b></p>
+                            <p>5-8 days</p>
+                        </div>
+                        <div class="packages__item packages__item-guarantee">
+                            <p><b>Min. gain:</b></p>
+                            <p>80HP & 50Nm</p>
+                        </div>
                     </div>
-                    <div class="packages__item packages__item-money">
-                        <p><b>Price:</b></p>
-                        <p>$2000</p>
+                    <div class="packages__box">
+                        <div class="packages__item packages__item-name">
+                            <h3>Acceleration</h3>
+                        </div>
+                        <div class="packages__item packages__item-money">
+                            <p><b>Price:</b></p>
+                            <p>$4000</p>
+                        </div>
+                        <div class="packages__item packages__item-term">
+                            <p><b>Duration:</b></p>
+                            <p>10-14 days</p>
+                        </div>
+                        <div class="packages__item packages__item-guarantee">
+                            <p><b>Min. gain:</b></p>
+                            <p>100HP & 200Nm</p>
+                        </div>
                     </div>
-                    <div class="packages__item packages__item-term">
-                        <p><b>Duration:</b></p>
-                        <p>5-8 days</p>
-                    </div>
-                    <div class="packages__item packages__item-guarantee">
-                        <p><b>Min. gain:</b></p>
-                        <p>80HP & 50Nm</p>
-                    </div>
-                </div>
-                <div class="packages__box">
-                    <div class="packages__item packages__item-name">
-                        <h3>Acceleration</h3>
-                    </div>
-                    <div class="packages__item packages__item-money">
-                        <p><b>Price:</b></p>
-                        <p>$4000</p>
-                    </div>
-                    <div class="packages__item packages__item-term">
-                        <p><b>Duration:</b></p>
-                        <p>10-14 days</p>
-                    </div>
-                    <div class="packages__item packages__item-guarantee">
-                        <p><b>Min. gain:</b></p>
-                        <p>100HP & 200Nm</p>
-                    </div>
-                </div>
-                <div class="packages__box">
-                    <div class="packages__item packages__item-name">
-                        <h3>FullOption</h3>
-                    </div>
-                    <div class="packages__item packages__item-money">
-                        <p><b>Price:</b></p>
-                        <p>$8000</p>
-                    </div>
-                    <div class="packages__item packages__item-term">
-                        <p><b>Duration:</b></p>
-                        <p>2-3 weeks</p>
-                    </div>
-                    <div class="packages__item packages__item-guarantee">
-                        <p><b>Min. gain:</b></p>
-                        <p>220HP & 350Nm</p>
+                    <div class="packages__box">
+                        <div class="packages__item packages__item-name">
+                            <h3>FullOption</h3>
+                        </div>
+                        <div class="packages__item packages__item-money">
+                            <p><b>Price:</b></p>
+                            <p>$8000</p>
+                        </div>
+                        <div class="packages__item packages__item-term">
+                            <p><b>Duration:</b></p>
+                            <p>2-3 weeks</p>
+                        </div>
+                        <div class="packages__item packages__item-guarantee">
+                            <p><b>Min. gain:</b></p>
+                            <p>220HP & 350Nm</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -268,6 +271,8 @@
         </p>
     </footer>
 
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="dist/js/aos.min.js"></script>
     <script src="dist/js/main.min.js"></script>
 </body>
 
