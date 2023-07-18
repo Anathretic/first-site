@@ -1,7 +1,11 @@
-# first-site
+# Cars-Tuning (Website project)
 
-An example website with several modules that can be developed in different directions.
+## About
 
-Used: HTML5, CSS (GRID and Flexbox layout), SASS, JavaScript, BEM Methodology, RWD.
+An example of a car tuning company website with a well-planned UI with an emphasis on aesthetics. The website has little JavaScript code due to the fact that in this project I focused mainly on design. There are two forms available - a newsletter subscription form and a contact form.
 
-Folder 'dist' was added due to the use of github-pages.
+## Links & Tools
+
+**Used:** HTML, CSS (incl. SASS preprocessor), JavaScript, Gulp, AOS
+
+**URL:** Coming soon
