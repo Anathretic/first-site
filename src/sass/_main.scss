@@ -630,17 +630,18 @@ body {
 
 	&__icons {
 		padding: 1em 1em;
+	}
 
-		.fa-brands {
-			padding: 0 0.8em;
-			color: colors.$white-color;
-			font-size: 3rem;
-			transition: transform 0.3s, color 0.3s;
+	&__icon {
+		padding: 0.5em;
+		margin: 0.5em;
+		color: colors.$white-color;
+		font-size: 3rem;
+		transition: transform 0.3s, color 0.3s;
 
-			&:hover {
-				transform: scale(1.25);
-				color: colors.$special-color;
-			}
+		&:hover {
+			transform: scale(1.25);
+			color: colors.$special-color;
 		}
 	}
 }
