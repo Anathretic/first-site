@@ -239,23 +239,24 @@
                 <h2 class="section-title">contact<span>Us</span></h2>
                 <form class="contact__form">
                     <div class="contact__form-box">
+                        <input type="text" id="name" required>
                         <label for="name">Your name:</label>
-                        <input type="text" id="name" placeholder="Enter your name..">
                     </div>
                     <div class="contact__form-box">
+                        <input type="text" id="email" required>
                         <label for="email">Your e-mail:</label>
-                        <input type="text" id="email" placeholder="Enter your e-mail..">
                     </div>
                     <div class="contact__form-box">
+                        <textarea id="msg" cols="30" rows="10" required></textarea>
                         <label for="msg">Message:</label>
-                        <textarea id="msg" cols="30" rows="10" placeholder="Write it.."></textarea>
                     </div>
                 </form>
                 <button type="submit" class="contact__form-btn">Send</button>
-                <div class="contact__form-error error-toggle">
-                    <p>We need more information...</p>
-                    <p>Or correct e-mail...</p>
-                </div>
+            </div>
+            <div class="contact__popup">
+                <i class="fa-solid fa-circle-check contact__popup-icon" style="color: #2e7114;"></i>
+                <p class="contact__popup-text">Wysłane!</p>
+                <div class="contact__popup-btn"><i class="fa-solid fa-xmark"></i></div>
             </div>
         </section>
     </main>

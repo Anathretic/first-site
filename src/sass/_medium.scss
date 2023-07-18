@@ -98,6 +98,11 @@
 			gap: 3rem;
 
 			&-box {
+				input,
+				textarea {
+					margin-bottom: 2em;
+				}
+
 				&:nth-child(1) {
 					grid-column: 1/4;
 					grid-row: 1/2;
@@ -116,10 +121,6 @@
 
 			&-btn {
 				grid-row: 3/4;
-			}
-
-			&-error {
-				font-size: 2.2rem;
 			}
 		}
 	}

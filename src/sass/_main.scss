@@ -21,10 +21,6 @@ body {
 	font-size: 1.6rem;
 }
 
-.error-toggle {
-	visibility: hidden;
-}
-
 .hide-cookies {
 	display: none;
 }
@@ -477,10 +473,16 @@ body {
 		grid-template-columns: repeat(6, 1fr);
 
 		&-box {
+			position: relative;
+
 			label {
-				display: block;
-				margin-bottom: 0.5em;
-				font-size: 2rem;
+				position: absolute;
+				top: 11px;
+				left: 26px;
+				font-size: 18px;
+				color: #999999;
+				transition: 0.2s all;
+				cursor: text;
 			}
 
 			textarea {
@@ -491,7 +493,7 @@ body {
 
 			input,
 			textarea {
-				margin-bottom: 2em;
+				margin-bottom: 4em;
 				padding: 1em 2em;
 				width: 100%;
 				background: none;
@@ -519,6 +521,15 @@ body {
 				grid-column: 1/-1;
 				grid-row: 3/4;
 			}
+
+			input:focus ~ label,
+			input:valid ~ label,
+			textarea:focus ~ label,
+			textarea:valid ~ label {
+				top: -24px;
+				left: 0;
+				color: colors.$special-color;
+			}
 		}
 
 		&-btn {
@@ -541,14 +552,65 @@ body {
 				outline: none;
 			}
 		}
+	}
 
-		&-error {
-			padding: 2em 0;
-			color: colors.$special-color;
-			font-size: 1.8rem;
+	&__popup {
+		position: fixed;
+		top: -100px;
+		left: 50%;
+		transform: translate(-50%);
+		width: 90%;
+		max-width: 435px;
+		height: 100px;
+		background-color: colors.$white-color;
+		color: colors.$black-color;
+		border-radius: 8px;
+		box-shadow: 3px 3px 10px rgba(46, 46, 46, 0.18);
+		transition: opacity 0.5s, top 0.5s;
+		opacity: 0;
+		z-index: 5;
+
+		&-icon,
+		&-text,
+		&-btn {
+			position: absolute;
+		}
+
+		&-icon {
+			top: 50%;
+			left: 10%;
+			transform: translate(-50%, -50%);
+			font-size: 2em;
+		}
+
+		&-text {
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			font-size: 1.2em;
 			text-align: center;
 		}
+
+		&-btn {
+			right: 0.3em;
+			top: 0.3em;
+			padding: 0.5em;
+			font-size: 1.2em;
+			cursor: pointer;
+		}
 	}
+}
+
+.warning {
+	input,
+	textarea {
+		border-bottom: 1px solid red;
+	}
+}
+
+.contact-popup-active {
+	top: 80px;
+	opacity: 1;
 }
 
 .footer {
