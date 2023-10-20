@@ -9,5 +9,3 @@ An example of a car tuning company website with a well-planned UI with an emphas
 ## Links & Tools
 
 **Used:** HTML, CSS (incl. SASS preprocessor), JavaScript, Gulp, AOS
-
-**URL:** Coming soon
